@@ -11,11 +11,42 @@
   }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  /* Fontes */
+  --font-work-sans: "Work Sans", sans-serif;
+
+  /* Breakpoints */
+  --breakpoint-xs: 29.6875rem; /* 475px */
+  --breakpoint-sm: 40rem; /* 640px (default Tailwind) */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-2xl: 96rem; /* 1536px */
+
+  /* Cores */
+  --color-primary-100: #ffe8f0;
+  --color-primary: #ee2b69;
+
+  --color-secondary: #fbe843;
+
+  --color-black-100: #333333;
+  --color-black-200: #141413;
+  --color-black-300: #7d8087;
+  --color-black: #000000;
+
+  --color-white-100: #f7f7f7;
+  --color-white: #ffffff;
+
+  /* Border Radius */
+  --radius: 0.5rem; /* Define um valor base se quiser */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Box Shadows */
+  --shadow-100: 2px 2px 0px 0px rgb(0, 0, 0);
+  --shadow-200: 2px 2px 0px 2px rgb(0, 0, 0);
+  --shadow-300: 2px 2px 0px 2px rgb(238, 43, 105);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,7 +56,8 @@
   }
 }
 
-body, html {
+body,
+html {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
