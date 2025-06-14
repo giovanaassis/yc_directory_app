@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns,
   },
+  // experimental: {
+  //   ppr: "incremental",
+  // },
 };
 
 export default nextConfig;
