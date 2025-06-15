@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import { formatDate } from "@/lib/utils";
 import { Author, Startup } from "@/sanity/types";
 import { EyeIcon } from "lucide-react";
@@ -42,7 +42,7 @@ function StartupCard({ post }: { post: StartupCardType }) {
 
         <Link href={`/user/${author?._id}`}>
           <Image
-            src="https://placehold.co/48x48.png"
+            src={author?.image || "https://placehold.co/48x48.png"}
             alt="avatar_author"
             width={48}
             height={48}

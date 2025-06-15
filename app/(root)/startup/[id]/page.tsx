@@ -7,7 +7,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import markdownit from "markdown-it";
 import { Suspense } from "react";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@/app/components/ui/skeleton";
 import View from "@/app/components/View";
 
 // export const experimental_ppr = true;
@@ -74,19 +74,22 @@ export default async function StartupPage({
 
               <h3 className="text-30-bold">Pitch Details</h3>
               {parsedContent ? (
-                <article dangerouslySetInnerHTML={{ __html: parsedContent }} className="prose max-w-4xl break-all" />
+                <article
+                  dangerouslySetInnerHTML={{ __html: parsedContent }}
+                  className="prose max-w-4xl break-all"
+                />
               ) : (
                 <p className="no-result">No details provided.</p>
               )}
             </div>
 
-            <hr className="divider"/>
+            <hr className="divider" />
           </>
         )}
       </section>
 
-      <Suspense fallback={<Skeleton className="view_skeleton"/>}>
-        <View id={id}/>
+      <Suspense fallback={<Skeleton className="view_skeleton" />}>
+        <View id={id} />
       </Suspense>
     </>
   );
