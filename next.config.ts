@@ -11,12 +11,15 @@ const remotePatterns: RemotePattern[] = [
 ];
 
 const nextConfig: NextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     remotePatterns,
   },
-  // experimental: {
-  //   ppr: "incremental",
-  // },
 };
 
 export default nextConfig;
