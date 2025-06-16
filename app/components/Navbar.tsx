@@ -28,8 +28,14 @@ export default async function Navbar() {
               <button type="submit">Logout</button>
             </form>
 
-            <Link href={`/user/${session?.user?.id}`}>
-              <span>{session?.user?.name}</span>
+            <Link href={`/user/${session?.id}`}>
+              <Image
+                src={session?.user?.image || "https://placehold.co/48x48.png"}
+                alt="avatar_author"
+                width={48}
+                height={48}
+                className="rounded-full"
+              />
             </Link>
           </>
         ) : (

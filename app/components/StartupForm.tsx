@@ -57,7 +57,7 @@ function StartupForm() {
       }
 
       toast("Error", {
-        description: "Please check your inputs an try again",
+        description: "Please check your inputs and try again",
         style: { color: "red" },
       });
 
@@ -88,7 +88,7 @@ function StartupForm() {
           placeholder="Startup Title"
         />
 
-        {errors.title && <p className="startup-form_error">{errors.title}</p>}
+        {state?.errors.title && <p className="startup-form_error">{state.errors.title}</p>}
       </div>
 
       <div>
